@@ -23,8 +23,9 @@ func main() {
     signal.Notify(signals, syscall.SIGHUP, syscall.SIGINT, syscall.SIGTERM, syscall.SIGQUIT)
     select {
         case s := <-signals:
-        kafka.KafkaStdLogger.Println("kafka test receive system signal:", s)
-    return
+        	kafka.KafkaStdLogger.Println("kafka test receive system signal:", s)
+    		return
+	}
 }
 
 func msgHandler(message *sarama.ConsumerMessage) (bool, error) {
