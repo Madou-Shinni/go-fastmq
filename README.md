@@ -46,8 +46,8 @@ func msgHandler(message *sarama.ConsumerMessage) (bool, error) {
 ***
 
 你可以根据你的具体业务定义自己的消息体，这里我给出了两个示例，你可以使用同步生产和异步生产。当然一般情况下我们推荐异步生产者，
-因为他的效率更高，应用更为广泛。我采用了map[name]的方式来创建和管理消费者，通过`InitAsyncKafkaProducer`或者`InitSyncKafkaProducer`方法来创建消费者
-我们会把他放在一个map当中，然后通过`GetKafkaAsyncProducer`或者`GetKafkaSyncProducer`来获取消费者
+因为他的效率更高，应用更为广泛。我采用了map[name]的方式来创建和管理生产者，通过`InitAsyncKafkaProducer`或者`InitSyncKafkaProducer`方法来创建生产者
+我们会把他放在一个map当中，然后通过`GetKafkaAsyncProducer`或者`GetKafkaSyncProducer`来获取生产者
 
 ```go
 // 消息体
