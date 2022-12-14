@@ -1,7 +1,7 @@
 package kafka
 
 import (
-	"gitee.com/phper95/pkg/logger"
+	"gitee.com/Madou-Shinni/go-logger"
 	"github.com/pkg/errors"
 	"go.uber.org/zap"
 	"os"

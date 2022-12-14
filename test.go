@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"gitee.com/Madou-Shinni/go-fastmq/kafka"
-	"gitee.com/phper95/pkg/logger"
+	"gitee.com/Madou-Shinni/go-logger"
 	"github.com/Shopify/sarama"
 	"go.uber.org/zap"
 	"os"
@@ -14,7 +14,8 @@ import (
 )
 
 var (
-	hosts   = []string{"127.0.0.1:9092"}
+	//hosts   = []string{"127.0.0.1:9092"}
+	hosts   = []string{"112.124.14.11:9092"}
 	topic   = "test"
 	groupId = "test-group"
 )
